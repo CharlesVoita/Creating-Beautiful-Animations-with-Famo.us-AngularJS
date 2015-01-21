@@ -1,0 +1,22 @@
+{
+	"name": "Beautiful Animation with Famo.us AngularJS",
+	"version": "0.0.1",
+	"description": "Beautiful Animation with Famo.us AngularJS by Charles Voita @ http://strangemilk.com/",
+	"dependencies": {
+    	"angular": "1.2.22",
+		"angular-resource": "1.2.22",
+		"angular-mocks": "~1.2",
+		"angular-cookies": "1.2.22",
+		"angular-animate": "1.2.22",
+		"angular-touch": "1.2.22",
+		"angular-sanitize": "1.2.22",
+		"angular-bootstrap": "~0.11.0",
+		"angular-ui-utils": "~0.1.1",
+		"angular-ui-router": "0.2.x",
+		"angular-route": "1.2.22",
+		"famous-angular": "0.5.0",
+		"underscore": "~1.6.0",
+		"famous-polyfills": "~0.3.0",
+		"angular-loading-bar":"*"
+	} 
+}
