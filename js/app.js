@@ -48,7 +48,7 @@ var faBoilerPlateApp = angular.module('faBoilerPlateApp', ['ui.router', 'famous.
       opacity : new Transitionable(0)
     },
     {
-      text : 'SwiftList is killer',
+      text : 'Check out SwiftList at swiftlist.com',
       transform : new Transitionable(0),
       opacity : new Transitionable(0)
     },
@@ -57,15 +57,15 @@ var faBoilerPlateApp = angular.module('faBoilerPlateApp', ['ui.router', 'famous.
   $scope.linkTimelines = {
       translate: function($transition){
         return $timeline([
-          [0, [0, 50, 0], Easing.outQuint],
-          [1.39, [0, 0, 0]]
+          [0, [200, 250, 0], Easing.outBounce],
+          [1, [0, 0, 0]]
         ])($transition.get()); // we need to apply the transition and return it
       
       }, // translate
       opacity: function($transition){
         return $timeline([
-          [0, 0, Easing.outQuint],
-          [1.39, 1]
+          [0, 0, Easing.outQuad],
+          [1, 1]
         ])($transition.get()); // we need to apply the transition and return it
       
       } // opacity
@@ -73,9 +73,9 @@ var faBoilerPlateApp = angular.module('faBoilerPlateApp', ['ui.router', 'famous.
   } // linkTimeLines
 
   $scope.linkEnter = function(transform, opacity, $index, $done){
-    transform.delay((2*($index*150)), function(){ // we will delay each animation based on index
-      transform.set(1, {duration: 400, curve: 'easeOut'}, $done)
-      opacity.set(1, {duration: 400, curve: 'easeOut'}, $done)
+    transform.delay((($index*150)), function(){ // we will delay each animation based on index
+      transform.set(1, {duration: 1400})
+      opacity.set(1, {duration: 1400}, $done)
     
     });
     
