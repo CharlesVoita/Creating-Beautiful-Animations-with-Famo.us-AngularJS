@@ -1,0 +1,20 @@
+<fa-modifier>
+	<fa-surface>
+		<h1>Second Partial Loaded</h1>
+		<p>Message from controller:</p>
+		<p>{{secondMessage}}</p>
+		<!-- Requires fa-app to have fa-surfaces, held within other surfaces -->
+		<fa-app>
+			<fa-modifier ng-repeat="link in links"
+				fa-translate="linkTimelines.translate(link.transform)"
+				fa-opacity="linkTimelines.opacity(link.transform)"
+				fa-animate-enter="linkEnter(link.transform, link.opacity, $index, $done)"
+				fa-size="[undefined, 40]"
+				fa-index="$index">
+				<fa-surface>
+					{{link.text}}
+				</fa-surface>
+			</fa-modifier>
+		</fa-app>
+	</fa-surface>
+</fa-modifier>
