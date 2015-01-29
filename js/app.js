@@ -17,7 +17,7 @@ var faBoilerPlateApp = angular.module('faBoilerPlateApp', ['ui.router', 'famous.
       ;
 	}
 ])
-.controller('mainController', function($scope, $famous) {
+.controller('mainController', function($scope) {
   $scope.mainMessage = "Main Controller Loaded";
 
 })
@@ -57,7 +57,8 @@ var faBoilerPlateApp = angular.module('faBoilerPlateApp', ['ui.router', 'famous.
   $scope.linkTimelines = {
       translate: function($transition){
         return $timeline([
-          [0, [200, 250, 0], Easing.outBounce],
+          [0, [500, 0, 0], Easing.outQuad],
+          [.2, [200, 250, 0], Easing.outBounce],
           [1, [0, 0, 0]]
         ])($transition.get()); // we need to apply the transition and return it
       
@@ -75,7 +76,7 @@ var faBoilerPlateApp = angular.module('faBoilerPlateApp', ['ui.router', 'famous.
   $scope.linkEnter = function(transform, opacity, $index, $done){
     transform.delay((($index*150)), function(){ // we will delay each animation based on index
       transform.set(1, {duration: 1400}) // we will set each Transitionable to 1 == which is the index of the $timeline to transition to
-      opacity.set(1, {duration: 2200}, $done)
+      opacity.set(1, {duration: 1600}, $done)
     
     });
     
